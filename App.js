@@ -1,5 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
+import { TextInput } from "react-native";
 import { View } from "react-native";
 
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -12,8 +13,12 @@ import MyAccountScreen from "./app/screens/MyAccountScreen";
 import IconItem from "./app/components/iconItem/IconItem";
 import colors from "./app/config/colors";
 import ListingsScreen from "./app/screens/ListingsScreen";
+import AppScreen from "./app/components/appScreen/AppScreen";
+import AppTextInput from "./app/components/appTextInput/AppTextInput";
 
 export default function App() {
+  const [firstName, setFirstName] = useState("");
+
   return (
     // <View
     //   style={{
@@ -39,6 +44,23 @@ export default function App() {
     // <MessagesScreen />
 
     // <MyAccountScreen />
-    <ListingsScreen />
+    // <ListingsScreen />
+
+    // <AppScreen>
+    //   <TextInput
+    //     style={{
+    //       borderBottomColor: "#ccc",
+    //       borderBottomWidth: 1,
+    //     }}
+    //     placeholder="First Name"
+    //     onChangeText={(text) => setFirstName(text)}
+    //     maxLength={10}
+    //     keyboardType="numeric"
+    //     clearButtonMode="always"
+    //     // secureTextEntry // it is boolean so no need to set a value
+    //   />
+    // </AppScreen>
+
+    <AppTextInput />
   );
 }
