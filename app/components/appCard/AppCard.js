@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   card: {
     borderRadius: 20,
     backgroundColor: colors.white,
-    marginBottom: 10,
+    marginBottom: 20,
     overflow: "hidden",
   },
   image: {

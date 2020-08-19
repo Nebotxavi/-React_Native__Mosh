@@ -11,6 +11,7 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 import MyAccountScreen from "./app/screens/MyAccountScreen";
 import IconItem from "./app/components/iconItem/IconItem";
 import colors from "./app/config/colors";
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
 
     // <MessagesScreen />
 
-    <MyAccountScreen />
+    // <MyAccountScreen />
+    <ListingsScreen />
   );
 }
