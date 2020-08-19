@@ -8,6 +8,9 @@ import AppButton from "./app/components/appButton/AppButton";
 import AppCard from "./app/components/appCard/AppCard";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import MyAccountScreen from "./app/screens/MyAccountScreen";
+import IconItem from "./app/components/iconItem/IconItem";
+import colors from "./app/config/colors";
 
 export default function App() {
   return (
@@ -32,6 +35,8 @@ export default function App() {
 
     // <ViewImageScreen />
 
-    <MessagesScreen />
+    // <MessagesScreen />
+
+    <MyAccountScreen />
   );
 }
