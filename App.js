@@ -15,9 +15,19 @@ import colors from "./app/config/colors";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import AppScreen from "./app/components/appScreen/AppScreen";
 import AppTextInput from "./app/components/appTextInput/AppTextInput";
+import { Switch } from "react-native-gesture-handler";
+import AppPicker from "./app/components/appPicker/AppPicker";
+
+const categories = [
+  { label: "Furniture", value: 1 },
+  { label: "Clothing", value: 2 },
+  { label: "Cameras", value: 3 },
+];
 
 export default function App() {
   const [firstName, setFirstName] = useState("");
+  const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState(categories[0]);
 
   return (
     // <View
@@ -60,7 +70,9 @@ export default function App() {
     //     // secureTextEntry // it is boolean so no need to set a value
     //   />
     // </AppScreen>
-
-    <AppTextInput />
+    <AppScreen>
+      <AppPicker items={categories} icon="apps" placeholder="Category" selectedItem={category} onSelectItem={(item) => setCategory(item)} />
+      <AppTextInput icon="email" placeholder="Email" />
+    </AppScreen>
   );
 }
