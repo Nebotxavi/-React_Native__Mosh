@@ -17,6 +17,7 @@ import AppScreen from "./app/components/appScreen/AppScreen";
 import AppTextInput from "./app/components/appTextInput/AppTextInput";
 import { Switch } from "react-native-gesture-handler";
 import AppPicker from "./app/components/appPicker/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -25,11 +26,8 @@ const categories = [
 ];
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
-  const [isNew, setIsNew] = useState(false);
-  const [category, setCategory] = useState(categories[0]);
-
   return (
+    <LoginScreen />
     // <View
     //   style={{
     //     backgroundColor: "#f8f4f4",
@@ -70,9 +68,9 @@ export default function App() {
     //     // secureTextEntry // it is boolean so no need to set a value
     //   />
     // </AppScreen>
-    <AppScreen>
-      <AppPicker items={categories} icon="apps" placeholder="Category" selectedItem={category} onSelectItem={(item) => setCategory(item)} />
-      <AppTextInput icon="email" placeholder="Email" />
-    </AppScreen>
+    // <AppScreen>
+    //   <AppPicker items={categories} icon="apps" placeholder="Category" selectedItem={category} onSelectItem={(item) => setCategory(item)} />
+    //   <AppTextInput icon="email" placeholder="Email" />
+    // </AppScreen>
   );
 }
