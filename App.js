@@ -18,6 +18,8 @@ import AppTextInput from "./app/components/appTextInput/AppTextInput";
 import { Switch } from "react-native-gesture-handler";
 import AppPicker from "./app/components/appPicker/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -27,7 +29,7 @@ const categories = [
 
 export default function App() {
   return (
-    <LoginScreen />
+    <ListingEditScreen />
     // <View
     //   style={{
     //     backgroundColor: "#f8f4f4",
