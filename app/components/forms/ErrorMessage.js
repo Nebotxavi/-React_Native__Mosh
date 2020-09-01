@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-import AppText from "./appText/AppText";
+import AppText from "../appText/AppText";
 
 const ErrorMessage = ({ error, visible }) => {
   if (!error || !visible) return null;
